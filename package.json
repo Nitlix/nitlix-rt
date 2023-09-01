@@ -1,12 +1,20 @@
 {
   "name": "nitlix-rt",
-  "version": "1.0.0",
+  "version": "1.0.8",
   "description": "🎊 A starting out collection of request tools made to make Edge API Routes faster and simplier to develop.",
   "main": "./dist/exports.js",
-  "keywords": ["requests", "nextjs", "edge", "api", "tools", "nitlix"],
+  "keywords": [
+    "requests",
+    "nextjs",
+    "edge",
+    "api",
+    "tools",
+    "nitlix"
+  ],
   "author": "nitlix",
   "license": "MIT",
   "dependencies": {
-    "next": "^13.4.19"
+    "bcrypt-ts": "^4.0.0",
+    "bcryptjs": "^2.4.3"
   }
 }

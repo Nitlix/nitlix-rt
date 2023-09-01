@@ -1,15 +1,10 @@
-import { NextRequest } from 'next/server'
-import bodyStreamToJSON from './tools/bodyStreamToJSON';
-
-export default async function(bodyRequirements: string[], request: NextRequest): Promise<boolean> {
-    if (!request.body){
-        return false;
+export default function(bodyRequirements: string[], bodyJSON: { [key: string]: any } | null): boolean {
+    if (!bodyJSON) {
+        return false
     }
 
-    const body = await bodyStreamToJSON(request.body);
-
     for (const requirement of bodyRequirements) {
-        if (!body[requirement]) {
+        if (!bodyJSON[requirement]) {
             return false
         }
     }
